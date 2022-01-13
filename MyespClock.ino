@@ -19,7 +19,6 @@
  
 #define TRIGGER 5   // NodeMCU Pin D1 > TRIGGER 
 #define ECHO    4   //Pin D2 > ECHO
-#define SENSOR_PIN    14 
 
 U8G2_SSD1306_128X64_NONAME_F_SW_I2C u8g2(U8G2_R0, /* clock=*/ SCL, /* data=*/ SDA, /* reset=*/ U8X8_PIN_NONE);   // All Boards without Reset of the Display
 
@@ -389,9 +388,6 @@ void setup() {
     // 初始化有LED的IO
     pinMode(LED_BUILTIN, OUTPUT);
     digitalWrite(LED_BUILTIN, HIGH);
-
-    //初始化 红外IO
-    pinMode(SENSOR_PIN,  INPUT);
     
     u8g2.begin();
 
